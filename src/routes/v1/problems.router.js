@@ -5,8 +5,8 @@ const {problemController} = require('../../controllers');
 
 const problemRouter = express.Router();
 
-problemRouter.get('/', problemController.pingProblemController)
-problemRouter.get('/', problemController.addProblem)
+problemRouter.get('/ping', problemController.pingProblemController)
+problemRouter.post('/', problemController.addProblem)
 problemRouter.get('/:id', problemController.updateProblem)
 problemRouter.get('/:id', problemController.getProblem)
 problemRouter.get('/', problemController.getProblems)
